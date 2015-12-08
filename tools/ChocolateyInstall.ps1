@@ -20,3 +20,4 @@ move-item 'TempFile.txt' $infFile -Force
 
 # install the inf file
 & rundll32 syssetup,SetupInfObjectInstallAction DefaultInstall 128 $infFile
+
