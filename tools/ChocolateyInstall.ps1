@@ -7,11 +7,11 @@ $binRoot = "$env:systemdrive\"
 if($env:chocolatey_bin_root -ne $null){$binRoot = join-path $env:systemdrive $env:chocolatey_bin_root}
 $silentArgs = "/quiet TARGETDIR=`"$binRoot`" PERL_PATH=Yes PERL_EXT=Yes"
 
-$url = 'http://downloads.activestate.com/ActivePerl/releases/5.24.0.2400/ActivePerl-5.24.0.2400-MSWin32-x86-64int-300560.exe'
-$checksum = '2a13a4f3654f943d4ac725cfd18f72f750fb0f697b12a42b52551ef2d051cf3f'
+$url = 'http://downloads.activestate.com/ActivePerl/releases/5.24.1.2402/ActivePerl-5.24.1.2402-MSWin32-x86-64int-401627.exe'
+$checksum = 'efb8cf062bd8cf9f62e8cd18353c16a339300b8c17f04e7ed274419f9aa97dba'
 
-$url64bit = 'http://downloads.activestate.com/ActivePerl/releases/5.24.0.2400/ActivePerl-5.24.0.2400-MSWin32-x64-300558.exe'
-$checksum64 = '9e6ab2bb1335372cab06ef311cbaa18fe97c96f9dd3d5c8413bc864446489b92'
+$url64bit = 'http://downloads.activestate.com/ActivePerl/releases/5.24.1.2402/ActivePerl-5.24.1.2402-MSWin32-x64-401627.exe'
+$checksum64 = '0df8e3d6dcac863a928e2bb18dbc6c2cead30bd1ced82e35b480cfd36e908ffb'
 
 $checksumType = 'sha256'
 
