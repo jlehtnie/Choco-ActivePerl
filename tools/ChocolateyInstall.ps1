@@ -7,17 +7,14 @@ $binRoot = "$env:systemdrive\"
 if($env:chocolatey_bin_root -ne $null){$binRoot = join-path $env:systemdrive $env:chocolatey_bin_root}
 $silentArgs = "/quiet TARGETDIR=`"$binRoot`" PERL_PATH=Yes PERL_EXT=Yes"
 
-$url = 'http://downloads.activestate.com/ActivePerl/releases/5.24.1.2402/ActivePerl-5.24.1.2402-MSWin32-x86-64int-401627.exe'
-$checksum = 'efb8cf062bd8cf9f62e8cd18353c16a339300b8c17f04e7ed274419f9aa97dba'
-
-$url64bit = 'http://downloads.activestate.com/ActivePerl/releases/5.24.1.2402/ActivePerl-5.24.1.2402-MSWin32-x64-401627.exe'
-$checksum64 = '0df8e3d6dcac863a928e2bb18dbc6c2cead30bd1ced82e35b480cfd36e908ffb'
+$url64bit = 'http://downloads.activestate.com/ActivePerl/releases/5.24.3.2404/ActivePerl-5.24.3.2404-MSWin32-x64-404865.exe'
+$checksum64 = 'cb093acd7e5462ec3450372c76e3f6096a4f6ca75f5c9770a96c9bcf7e35950d'
 
 $checksumType = 'sha256'
 
 Install-ChocolateyPackage `
     -PackageName $packageName -FileType $fileType -SilentArgs $silentArgs `
-    -Url $url -Url64bit $url64bit -Checksum $checksum -Checksum64 $checksum64 -ChecksumType $checksumType
+    -Url64bit $url64bit -Checksum64 $checksum64 -ChecksumType $checksumType
 
 $toolsPath = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $parentPath = join-path $toolsPath '..'
