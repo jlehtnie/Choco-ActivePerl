@@ -9,8 +9,14 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: pack
-      run: choco pack ActivePerl
+      run: |
+        cd ActivePerl
+        choco pack
     - name: install
-      run: choco install -y ActivePerl -dv -s ActivePerl
+      run: |
+        cd ActivePerl
+        choco install -y ActivePerl -dv -s .
     - name: push
-      run: choco push -k="'TODO'" ActivePerl
+      run: |
+        cd ActivePerl
+        choco push -k="'TODO'" ActivePerl
