@@ -17,6 +17,8 @@ jobs:
         cd ActivePerl
         choco install -y ActivePerl -dv -s .
     - name: push
+      env:
+        api_key: ${{ secrets.choco_api_key }}
       run: |
         cd ActivePerl
-        choco push -k="'TODO'" ActivePerl
+        choco push -k="$ENV:api_key"
