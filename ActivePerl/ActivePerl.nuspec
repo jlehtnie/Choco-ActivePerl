@@ -8,8 +8,7 @@
         <owners>H. Alan Stevens</owners>
         <packageSourceUrl>https://github.com/jlehtnie/Choco-ActivePerl</packageSourceUrl>
         <summary>ActivePerl is the leading commercial-grade distribution of the open source Perl scripting language. Download ActivePerl Community Edition free binaries for your development projects and internal deployments.</summary>
-        <description>ActivePerl is the leading commercial-grade distribution of the open source Perl scripting language. Download ActivePerl Community Edition free binaries for your development projects and internal deployments.
-        | Please install with chocolatey (http://nuget.org/List/Packages/chocolatey).</description>
+        <description>ActivePerl is the leading commercial-grade distribution of the open source Perl scripting language. Download ActivePerl Community Edition free binaries for your development projects and internal deployments.</description>
         <projectUrl>http://www.activestate.com/activeperl/downloads</projectUrl>
         <tags>perl</tags>
         <licenseUrl>http://www.activestate.com/activeperl/license-agreement</licenseUrl>
