@@ -1,15 +1,14 @@
 $packageName = 'ActivePerl'
-$fileType = 'exe'
+$fileType = 'msi'
 $binRoot = "$env:systemdrive\"
 
 
 ### Using an environment variable to to define the bin root until we implement YAML configuration ###
 if($env:chocolatey_bin_root -ne $null){$binRoot = join-path $env:systemdrive $env:chocolatey_bin_root}
-$silentArgs = "/exenoupdates /quiet TARGETDIR=`"$binRoot`" PERL_PATH=Yes PERL_EXT=Yes"
+$silentArgs = "/quiet TARGETDIR=`"$binRoot`" PERL_PATH=Yes PERL_EXT=Yes"
 
-$url64bit = 'http://downloads.activestate.com/ActivePerl/releases/5.24.3.2404/ActivePerl-5.24.3.2404-MSWin32-x64-404865.exe'
-$checksum64 = 'cb093acd7e5462ec3450372c76e3f6096a4f6ca75f5c9770a96c9bcf7e35950d'
-
+$url64bit = 'https://cli-msi.s3.amazonaws.com/ActivePerl-5.28.msi'
+$checksum64 = '552e3d4cf6068aa3751a4531c689e7045aa91d3e06bf6d731c55ef529723ee0a'
 $checksumType = 'sha256'
 
 Install-ChocolateyPackage `

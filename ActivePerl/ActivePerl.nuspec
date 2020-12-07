@@ -3,7 +3,7 @@
     <metadata>
         <id>ActivePerl</id>
         <title>Active Perl Community Edition</title>
-        <version>5.24.3.2404001</version>
+        <version>5.28</version>
         <authors>ActiveState</authors>
         <owners>H. Alan Stevens</owners>
         <packageSourceUrl>https://github.com/jlehtnie/Choco-ActivePerl</packageSourceUrl>
@@ -13,7 +13,8 @@
         <tags>perl</tags>
         <licenseUrl>http://www.activestate.com/activeperl/license-agreement</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>http://www.activestate.com/sites/default/files/page/top_image/activeperldownload_headernew_0_0.png?1279571074</iconUrl>
+        <iconUrl>https://cdn.activestate.com/wp-content/uploads/2018/10/perl_icon_256x256-1.png</iconUrl>
+	<releaseNotes>https://docs.activestate.com/activeperl/5.28/get/relnotes/</releaseNotes>
   </metadata>
 </package>
 
