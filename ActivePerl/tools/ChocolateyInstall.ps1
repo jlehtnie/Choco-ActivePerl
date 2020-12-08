@@ -8,8 +8,8 @@ if($env:chocolatey_bin_root -ne $null){$binRoot = join-path $env:systemdrive $en
 $silentArgs = "/quiet TARGETDIR=`"$binRoot`" PERL_PATH=Yes PERL_EXT=Yes"
 
 $url64bit = 'https://cli-msi.s3.amazonaws.com/ActivePerl-5.28.msi'
-$checksum64 = '552e3d4cf6068aa3751a4531c689e7045aa91d3e06bf6d731c55ef529723ee0a'
-$checksumType = 'sha256'
+$checksum64 = (Invoke-WebRequest $url64bit -Method Head).Headers.'ETag'.Trim('"')
+$checksumType = 'md5'
 
 Install-ChocolateyPackage `
     -PackageName $packageName -FileType $fileType -SilentArgs $silentArgs `
